@@ -1,23 +1,21 @@
 {
-  "name": "optimizely-cli",
-  "version": "0.15.0",
-  "description": "A command line application to create Optimizely experiments and publish via the API",
+  "name": "localghost",
+  "version": "0.0.0",
+  "description": "Serve local modifications for remote websites",
   "main": "index.js",
   "bin": {
-    "optcli": "bin/optcli.js"
+    "optcli": "bin/cli.js"
   },
-  "scripts": {
-    "test": "mocha test"
-  },
-  "repository": "git@github.com:FunnelEnvy/optimizely-cli.git",
+  "repository": "git@github.com:johnhenry/localghost.git",
   "keywords": [
-    "optimizely",
-    "cli"
+    "localhost",
+    "host",
+    "javascript",
+    "css"
   ],
-  "author": "Arun Sivashankaran",
+  "author": "John Henry",
   "contributors": [
-    "Arun Sivashankaran",
-    "John Henry"
+    "Arun Sivashankaran"
   ],
   "license": "Apache 2.0",
   "dependencies": {
@@ -36,8 +34,6 @@
     "node": "^0.10.32"
   },
   "devDependencies": {
-    "chai": "^1.10.0",
-    "mocha": "^2.1.0",
     "nexpect": "^0.4.2",
     "proxyquire": "^1.3.1",
     "quick-temp": "^0.1.2",
