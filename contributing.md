@@ -4,19 +4,19 @@ We love pull requests. Here's a quick guide.
 
 Fork, then clone the repo:
 
-    git clone git@github.com:your-username/optimizely-cli.git
+git clone git@github.com:your-username/optimizely-node-client.git
 
 Make sure the tests pass:
 
-    npm test
+npm test
 
 Make your change. Add tests for your change. Make the tests pass:
 
-    npm test
+npm test
 
 Push to your fork and [submit a pull request][pr].
 
-[pr]: https://github.com/funnelenvy/optimizely-cli/compare/
+[pr]: https://github.com/funnelenvy/optimizely-node-client/compare/
 
 At this point you're waiting on us. We like to at least comment on pull requests
 within three business days (and, typically, one business day). We may suggest
@@ -29,4 +29,4 @@ Some things that will increase the chance that your pull request is accepted:
 * Write a [good commit message][commit].
 
 [style]: https://github.com/RisingStack/node-style-guide
-[commit]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+[commit]: https://atom.io/docs/latest/contributing#git-commit-messages

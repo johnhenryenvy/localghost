@@ -45,6 +45,7 @@ program
 program
   .command("script [port]")
   .option("-j --jQuery", "Use jQuery")
+  .option("-p --pattern", "Include Pattern")
   .description("Host variation locally")
   .action(loadCommand("script"));
 
