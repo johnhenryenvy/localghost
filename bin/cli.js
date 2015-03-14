@@ -34,18 +34,19 @@ program
 //Host Command
 program
   .command("host [style] [scripts...]")
-  .option("-s --https", "HTTPS")
-  .option("-p --port", "Port")
-  .option("-l --live", "Live")
-  .option("-i --install", "Port")
+  .option("-s, --https", "HTTPS")
+  .option("-p, --port [port]", "Port")
+  .option("-l, --live", "Live")
+  .option("-i, --install", "Install")
   .description("Host files locally")
   .action(loadCommand("host"));
 
 //Host Command
 program
-  .command("script [port]")
-  .option("-j --jQuery", "Use jQuery")
-  .option("-p --pattern", "Include Pattern")
+  .command("script")
+  .option("-p, --port <port>", "Port")
+  .option("-j, --jQuery [jQuery]", "Use jQuery")
+  .option("-i, --include <include>", "Include Pattern")
   .description("Host variation locally")
   .action(loadCommand("script"));
 

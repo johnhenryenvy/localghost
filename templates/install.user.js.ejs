@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         Optimizely-cli Injection Script
-// @author       FunnelEnvy
-// @homepage     http://www.funnelenvy.com/optimizely-cli
-// @source       https://github.com/funnelenvy/optimizely-cli
+// @name         Local Injection Script
+// @author       John Henry
+// @homepage     https://github.com/johnhenry/localchost
+// @source       https://github.com/johnhenry/localchost
 // @namespace    optcli
-// @description  Inject local experiment JS / CSS into a Chrome page for development
+// @description  Inject local styles and scripts
 <% if(inc){%>
 // @include      <%- inc %>
 <% } %>
@@ -13,6 +13,8 @@
 <% }else if(jQuery){ %>
 // @require       //ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js
 <% }%>
+// ==/UserScript==
+
 var scriptElement = document.createElement('script');
 scriptElement.type = 'text/javascript';
 scriptElement.src =  '//localhost:<%- port %>/script.js';
