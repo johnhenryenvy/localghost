@@ -4,7 +4,7 @@
   "description": "Serve local modifications for remote websites",
   "main": "index.js",
   "bin": {
-    "optcli": "bin/cli.js"
+    "localghost": "bin/cli.js"
   },
   "repository": "git@github.com:johnhenry/localghost.git",
   "keywords": [
@@ -27,8 +27,11 @@
     "glob": "^4.2.2",
     "lodash": "^2.4.1",
     "optimizely-node-client": "^0.1.0",
+    "pem": "^1.7.1",
     "promptly": "^0.2.0",
-    "q": "^1.1.2"
+    "q": "^1.1.2",
+    "watch": "^0.14.0",
+    "ws": "^0.7.1"
   },
   "engines": {
     "node": "^0.10.32"

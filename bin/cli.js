@@ -1,11 +1,20 @@
 #!/usr/bin/env node
 
+////////
+//Dependencies
+////////
 var program = require("commander");
 var path = require("path");
 var optcliPackage = require(path.join(__dirname, "../", "package.json"));
-var logger = require("../lib/logger.js");
 
-/* commands */
+////////
+//Configuration
+////////
+
+////////
+//Methods
+////////
+
 var loadCommand = function(cmd) {
   var self = this;
   return function() {
@@ -14,24 +23,31 @@ var loadCommand = function(cmd) {
   }
 }
 
-//default log level
-logger.debugLevel = 'info';
-
-function increaseVerbosity(v) {
-  logger.debugLevel = 'debug';
-}
-
+////////
+//Application
+////////
 program
   .version(optcliPackage.version)
   .usage(" - " + optcliPackage.description)
   .description(optcliPackage.description)
-  .option("-v --verbose", "show debug output", increaseVerbosity)
 
+//Host Command
 program
-  .command("host <path> [port]")
-  .option("-s --ssl", "SSL")
-  .description("Host variation locally")
+  .command("host [style] [scripts...]")
+  .option("-s --https", "HTTPS")
+  .option("-p --port", "Port")
+  .option("-l --live", "Live")
+  .option("-i --install", "Port")
+  .description("Host files locally")
   .action(loadCommand("host"));
+
+//Host Command
+program
+  .command("script [port]")
+  .option("-j --jQuery", "Use jQuery")
+  .description("Host variation locally")
+  .action(loadCommand("script"));
+
 
 //Show help if no arguments are passed
 if (!process.argv.slice(2).length) {
