@@ -23,6 +23,11 @@ var loadCommand = function(cmd) {
   }
 }
 
+var list = function(val) {
+  return val.split(',');
+}
+
+
 ////////
 //Application
 ////////
@@ -33,7 +38,9 @@ program
 
 //Host Command
 program
-  .command("host [style] [scripts...]")
+  .command("host")
+  .option("-c, --css <css>", "Cascading Stylesheets", list)
+  .option("-j, --js <js>", "Javacripts", list)
   .option("-s, --https", "HTTPS")
   .option("-p, --port [port]", "Port")
   .option("-l, --live", "Live")
@@ -49,7 +56,6 @@ program
   .option("-i, --include <include>", "Include Pattern")
   .description("Host variation locally")
   .action(loadCommand("script"));
-
 
 //Show help if no arguments are passed
 if (!process.argv.slice(2).length) {

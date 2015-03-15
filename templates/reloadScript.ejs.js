@@ -1,5 +1,5 @@
 (function(){
-  var reconnectInterval = 5000;
+  var reconnectInterval = 1000;
   var ws;
   var connect = function(){
       if(ws) return;
