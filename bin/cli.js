@@ -37,7 +37,7 @@ program
   .option("-s, --https", "HTTPS")
   .option("-p, --port [port]", "Port")
   .option("-l, --live", "Live")
-  .option("-i, --install", "Install")
+  .option("-u, --userscript", "Serve Userscript Script")
   .description("Host files locally")
   .action(loadCommand("host"));
 
@@ -45,7 +45,7 @@ program
 program
   .command("script")
   .option("-p, --port <port>", "Port")
-  .option("-j, --jQuery [jQuery]", "Use jQuery")
+  .option("-j, --jquery [jquery]", "Use jQuery")
   .option("-i, --include <include>", "Include Pattern")
   .description("Host variation locally")
   .action(loadCommand("script"));
