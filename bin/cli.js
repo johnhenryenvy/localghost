@@ -42,6 +42,7 @@ program
   .option("-c, --css <css>", "Cascading Stylesheets", list)
   .option("-j, --js <js>", "Javacripts", list)
   .option("-s, --https", "HTTPS")
+  .option("-h, --savehttps", "Save Https Cert and Key")
   .option("-p, --port [port]", "Port")
   .option("-l, --live", "Live")
   .option("-u, --userscript", "Serve Userscript Script")
@@ -54,7 +55,7 @@ program
   .option("-p, --port <port>", "Port")
   .option("-j, --jquery [jquery]", "Use jQuery")
   .option("-i, --include <include>", "Include Pattern")
-  .description("Host variation locally")
+  .description("Create installable userscript")
   .action(loadCommand("script"));
 
 //Show help if no arguments are passed
