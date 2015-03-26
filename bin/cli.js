@@ -46,6 +46,8 @@ program
   .option("-p, --port [port]", "Port")
   .option("-l, --live", "Live")
   .option("-u, --userscript", "Serve Userscript Script")
+  .option("-q, --jquery [jquery]", "Include jQuery")
+
   .description("Host files locally")
   .action(loadCommand("host"));
 
