@@ -6,7 +6,7 @@
   "bin": {
     "localghost": "bin/cli.js"
   },
-  "repository": "git@github.com:johnhenry/localghost.git",
+  "repository": "git@github.com:johnhenryenvy/localghost.git",
   "keywords": [
     "localhost",
     "host",
