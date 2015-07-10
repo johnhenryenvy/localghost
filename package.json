@@ -1,6 +1,6 @@
 {
   "name": "localghost",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Serve local modifications for remote websites",
   "main": "index.js",
   "bin": {
