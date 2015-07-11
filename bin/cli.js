@@ -43,10 +43,13 @@ program
   .option("-j, --js <js>", "Javacripts", list)
   .option("-s, --https", "HTTPS")
   .option("-h, --savehttps", "Save Https Cert and Key")
+  .option("-i, --useincluded [useincluded]", "Use Included Https Certificated")
   .option("-p, --port [port]", "Port")
   .option("-l, --live", "Live")
   .option("-u, --userscript", "Serve Userscript Script")
   .option("-q, --jquery [jquery]", "Include jQuery")
+  .option("-t, --testpage [testpage]", "Include jQuery")
+
 
   .description("Host files locally")
   .action(loadCommand("host"));
